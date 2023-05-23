@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv'
 import http from 'http';
 import express from 'express';
 import { MongoClient, ServerApiVersion } from 'mongodb';
-dotenv.config()
+dotenv.config();
 var app = express();
 
 const uri = process.env.DB_URI;
