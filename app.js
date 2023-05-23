@@ -24,9 +24,8 @@ async function run() {
 run().catch(console.error);
 
 app.get('/', function(req, res) {
-  res.send('hello world');
+  res.send('Film-microservice');
 });
-
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -34,11 +33,10 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+  res.end('Film-microservice running.');
 });
 
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-  
+  console.log(`Server Film-microservice running at http://${hostname}:${port}/`);
 });
