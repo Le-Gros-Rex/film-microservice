@@ -1,9 +1,13 @@
+import dotenv from 'dotenv';
 import http from 'http';
 import express from 'express';
 import { MongoClient, ServerApiVersion } from 'mongodb';
+dotenv.config()
 var app = express();
 
-const uri = "mongodb+srv://root:root@cluster0.wdypow2.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.DB_URI;
+
+// "mongodb+srv://root:root@cluster0.wdypow2.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri);
 
