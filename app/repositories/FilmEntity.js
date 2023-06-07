@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 const filmSchema = new mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     nom: String,
 });
 

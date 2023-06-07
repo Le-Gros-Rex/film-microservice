@@ -1,8 +1,12 @@
-import FilmEntity from '../../infrastructure/persistence/FilmEntity.js';
+import FilmEntity from './FilmEntity.js';
 
 class FilmRepository {
     async findAll() {
         return FilmEntity.find();
+    }
+
+    async findById(filmId) {
+        return FilmEntity.findById(filmId);
     }
 }
 
