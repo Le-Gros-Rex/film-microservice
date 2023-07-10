@@ -31,9 +31,9 @@ class FilmController {
 
         try {
             const film = await this.filmService.getFilm(filmId);
+            if (!film) throw new Error('Film not found');
 
-            // replace with good api
-            const sessionsResponse = await axios.get(`https://random-data-api.com/api/v2/addresses?size=10`);
+            const sessionsResponse = await axios.get(`${process.env.RESERVATION_URL}/seancesFilm/${filmId}`);
             const sessions = sessionsResponse.data;
 
             response.status(200).json(sessions);

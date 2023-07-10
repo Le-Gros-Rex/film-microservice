@@ -19,5 +19,5 @@ app.get('/films/:id/sessions', filmController.getFilmSessions.bind(filmControlle
 
 app.listen(3000, () => {
   main().catch(err => console.log(err));
-  console.log('Server running');
+  console.log('Server running 3000');
 });
